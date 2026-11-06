@@ -31,3 +31,11 @@ Note: zeros in Glucose, BloodPressure, SkinThickness, Insulin and BMI usually st
 3. Standardize features (`StandardScaler`) so no feature dominates the margin
 4. Train `SVC(kernel='linear')`
 5. Evaluate with accuracy on both train and test sets to check for overfitting
+## Project structure
+.
+data/diabetesdata.csv
+notebooks/diabetes_svm_analysis.ipynb
+src/train.py # train + evaluate + save model
+src/predict.py # predict for one patient from the command line
+requirements.txt
+LICENSE
