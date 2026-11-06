@@ -62,3 +62,10 @@ python src/predict.py --pregnancies 6 --glucose 148 --bloodpressure 72 --skinthi
 - Small dataset (768 rows) from one population, so it may not generalize
 - Missing values are stored as zeros and are not imputed in the baseline
 - Accuracy alone can hide weak recall on the diabetic class
+## Roadmap
+
+- [ ] Impute zero-as-missing values (median or KNN)
+- [ ] Compare against logistic regression, random forest and gradient boosting
+- [ ] Tune hyperparameters with cross-validated grid search (RBF kernel, C, gamma)
+- [ ] Add ROC-AUC, confusion matrix and recall-focused evaluation
+- [ ] Build a Streamlit demo app
