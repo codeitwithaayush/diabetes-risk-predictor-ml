@@ -56,9 +56,23 @@ python src/predict.py --pregnancies 6 --glucose 148 --bloodpressure 72 --skinthi
 ```
 ## Results
 
-- `python src/train.py` prints train accuracy, test accuracy and a per-class report (precision, recall, F1)
-- The notebook shows the same train/test accuracy comparison step by step
-- The script uses its own split settings (80/20, stratified, fixed seed), so its numbers can differ slightly from the notebook
+Linear-kernel SVM, 80/20 stratified split (614 train / 154 test, `random_state=2`), features standardized inside a scikit-learn pipeline. Reproduce with `python src/train.py`.
+
+| Metric | Value |
+|---|---|
+| Train accuracy | 78.66% |
+| Test accuracy | 77.27% |
+
+| Class | Precision | Recall | F1 | Support |
+|---|---|---|---|---|
+| Non-diabetic (0) | 0.78 | 0.91 | 0.84 | 100 |
+| Diabetic (1) | 0.76 | 0.52 | 0.62 | 54 |
+
+**Takeaways**
+- Train and test accuracy are close, so the model is not overfitting
+- Recall on the diabetic class is only 0.52: about half of diabetic patients are missed. For a screening use case this matters more than overall accuracy
+- Next steps (see Roadmap): impute zero-as-missing values, try non-linear kernels and tree ensembles, and optimize for recall or ROC-AUC
+- The notebook uses its own split settings, so its numbers can differ slightly
 ## Limitations
 
 - Educational project only, **not a medical tool** and not a substitute for professional diagnosis
