@@ -69,3 +69,10 @@ python src/predict.py --pregnancies 6 --glucose 148 --bloodpressure 72 --skinthi
 - [ ] Tune hyperparameters with cross-validated grid search (RBF kernel, C, gamma)
 - [ ] Add ROC-AUC, confusion matrix and recall-focused evaluation
 - [ ] Build a Streamlit demo app
+## Acknowledgements
+
+This project started from [KalyanM45/Diabetes-Prediction-using-Machine-Learning](https://github.com/KalyanM45/Diabetes-Prediction-using-Machine-Learning). I restructured it, added the training and prediction scripts, and rewrote the documentation.
+
+## License
+
+Released under the GNU GPL v3.0, the same license as the original project. See [LICENSE](LICENSE).
