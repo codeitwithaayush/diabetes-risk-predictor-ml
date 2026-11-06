@@ -39,3 +39,15 @@ src/train.py # train + evaluate + save model
 src/predict.py # predict for one patient from the command line
 requirements.txt
 LICENSE
+## Quick start
+
+```bash
+git clone https://github.com/codeitwithaayush/diabetes-risk-predictor-ml.git
+cd diabetes-risk-predictor-ml
+python -m venv .venv
+.venv\Scripts\activate
+pip install -r requirements.txt
+
+python src/train.py
+python src/predict.py --pregnancies 6 --glucose 148 --bloodpressure 72 --skinthickness 35 --insulin 0 --bmi 33.6 --diabetespedigreefunction 0.627 --age 50
+```
