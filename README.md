@@ -32,13 +32,16 @@ Note: zeros in Glucose, BloodPressure, SkinThickness, Insulin and BMI usually st
 4. Train `SVC(kernel='linear')`
 5. Evaluate with accuracy on both train and test sets to check for overfitting
 ## Project structure
+
+```text
 .
-data/diabetesdata.csv
-notebooks/diabetes_svm_analysis.ipynb
-src/train.py # train + evaluate + save model
-src/predict.py # predict for one patient from the command line
-requirements.txt
-LICENSE
+|-- data/diabetesdata.csv
+|-- notebooks/diabetes_svm_analysis.ipynb
+|-- src/train.py        <- train, evaluate, save model
+|-- src/predict.py      <- predict one patient from the CLI
+|-- requirements.txt
+|-- LICENSE
+```
 ## Quick start
 
 ```bash
