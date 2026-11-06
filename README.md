@@ -51,3 +51,8 @@ pip install -r requirements.txt
 python src/train.py
 python src/predict.py --pregnancies 6 --glucose 148 --bloodpressure 72 --skinthickness 35 --insulin 0 --bmi 33.6 --diabetespedigreefunction 0.627 --age 50
 ```
+## Results
+
+- `python src/train.py` prints train accuracy, test accuracy and a per-class report (precision, recall, F1)
+- The notebook shows the same train/test accuracy comparison step by step
+- The script uses its own split settings (80/20, stratified, fixed seed), so its numbers can differ slightly from the notebook
