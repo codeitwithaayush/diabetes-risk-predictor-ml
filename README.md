@@ -24,3 +24,10 @@ Machine-learning project that predicts whether a patient is likely to have diabe
 | Outcome | 1 = diabetic, 0 = not diabetic |
 
 Note: zeros in Glucose, BloodPressure, SkinThickness, Insulin and BMI usually stand for missing readings in this dataset.
+## Methodology
+
+1. Load the CSV with pandas and explore it (matplotlib, seaborn)
+2. Split into train and test sets (`train_test_split`)
+3. Standardize features (`StandardScaler`) so no feature dominates the margin
+4. Train `SVC(kernel='linear')`
+5. Evaluate with accuracy on both train and test sets to check for overfitting
