@@ -56,3 +56,9 @@ python src/predict.py --pregnancies 6 --glucose 148 --bloodpressure 72 --skinthi
 - `python src/train.py` prints train accuracy, test accuracy and a per-class report (precision, recall, F1)
 - The notebook shows the same train/test accuracy comparison step by step
 - The script uses its own split settings (80/20, stratified, fixed seed), so its numbers can differ slightly from the notebook
+## Limitations
+
+- Educational project only, **not a medical tool** and not a substitute for professional diagnosis
+- Small dataset (768 rows) from one population, so it may not generalize
+- Missing values are stored as zeros and are not imputed in the baseline
+- Accuracy alone can hide weak recall on the diabetic class
